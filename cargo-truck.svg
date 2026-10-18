@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d9edf7"/><stop offset="1" stop-color="#f7fbfd"/></linearGradient><linearGradient id="road" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#465866"/><stop offset="1" stop-color="#18242d"/></linearGradient></defs>
+<rect width="1600" height="900" fill="url(#sky)"/><rect y="610" width="1600" height="290" fill="url(#road)"/>
+<path d="M0 610h1600" stroke="#9db0bb" stroke-width="7"/><path d="M0 760h1600" stroke="#f4a32b" stroke-width="10" stroke-dasharray="70 55" opacity=".85"/>
+<g transform="translate(180 300)"><rect x="410" y="85" width="760" height="290" rx="16" fill="#0b6f92"/><rect x="440" y="115" width="700" height="225" fill="#0c7da5"/><path d="M470 150h640" stroke="#6bc1d9" stroke-width="7" opacity=".55"/><text x="560" y="270" fill="#fff" font-family="Arial,sans-serif" font-size="78" font-weight="700">PC EXPRESS</text><text x="635" y="315" fill="#d8f2f9" font-family="Arial,sans-serif" font-size="24" letter-spacing="7">FASTER • SAFER • FURTHER</text>
+<path d="M410 375H120V195h205c58 0 85 20 110 65l55 115z" fill="#f2f5f6"/><path d="M135 215h180v105H135z" fill="#16364a"/><path d="M330 215h70v105h-70z" fill="#d8e4e9"/><rect x="80" y="340" width="1080" height="42" rx="20" fill="#172832"/>
+<circle cx="245" cy="400" r="70" fill="#101a21"/><circle cx="245" cy="400" r="34" fill="#c5d4da"/><circle cx="1040" cy="400" r="70" fill="#101a21"/><circle cx="1040" cy="400" r="34" fill="#c5d4da"/>
+</g></svg>
