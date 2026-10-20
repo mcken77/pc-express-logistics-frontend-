@@ -1,7 +1,8 @@
+const API_BASE = "https://pc-express-logistics-backend.onrender.com";
 const token=()=>localStorage.getItem('pcx_token');
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
-async function api(url,options={}){const headers={...(options.headers||{})};if(options.body&&typeof options.body!=='string'){headers['Content-Type']='application/json';options.body=JSON.stringify(options.body)}else if(!headers['Content-Type'])headers['Content-Type']='application/json';if(token())headers.Authorization='Bearer '+token();const r=await fetch(url,{...options,headers});const d=await r.json().catch(()=>({}));if(!r.ok)throw new Error(d.error||'Something went wrong. Please try again.');return d}
+async function api(url,options={}){if(url.startsWith('/'))url=API_BASE+url;const headers={...(options.headers||{})};if(options.body&&typeof options.body!=='string'){headers['Content-Type']='application/json';options.body=JSON.stringify(options.body)}if(token())headers['Authorization']='Bearer '+token();const r=await fetch(url,{...options,headers});const d=await r.json().catch(()=>({}));if(!r.ok)throw new Error(d.error||'Something went wrong. Please try again.');return d}
 function showResult(el,message,type='info'){if(!el)return;el.textContent=message;el.className=`result ${type}`}
 function statusClass(s){return String(s||'').toLowerCase().replace(/\s+/g,'-')}
 function money(v,c='USD'){return `${c} ${Number(v||0).toFixed(2)}`}
